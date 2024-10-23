@@ -48,9 +48,9 @@ public class GameState
         }
     }
 
-    public void RotateBlockcCW()
+    public void RotateBlockCCW()
     {
-        CurrentBlock.RotatecCW();
+        CurrentBlock.RotateCCW();
 
         if(!BlockFits())
         {
@@ -80,6 +80,6 @@ public class GameState
 
     private bool IsGameOver()
     {
-        return !(GameGridInstance)
+        return !GameGridInstance;
     }
 }

@@ -1,4 +1,4 @@
-namespace tetrisgame
+namespace tetrisgame;
 
 public class GameGrid
 {
@@ -42,11 +42,23 @@ public class GameGrid
         return true;
     }
 
-    private void ClearRow (int r, int numRows)
+    public bool IsRowEmpty (int r)
+    {
+        for (int c =  0; c < Columns; c++)
+        {
+            if (grid[r, c] != 0 )
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void ClearRow (int r)
     {
         for (int c = 0; c < Columns; c++)
         {
-            grid[r + numRows, c] = grid[r, c];
+            grid[r, c] = 0;
         }
     }
 
