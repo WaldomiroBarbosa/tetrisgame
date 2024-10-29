@@ -9,10 +9,13 @@ public class BlockQueue
         new IBlock(),
         new JBlock(),
         new LBlock(),
-        new OBlock()
+        new OBlock(),
+        new SBlock(),
+        new TBlock(),
+        new ZBlock()
     }
 
-    private readonly Random rndm = new Random();
+    private readonly Random random = new Random();
 
     public Block NextBlock { get; private set; }
 
@@ -23,7 +26,7 @@ public class BlockQueue
 
     private Block RandomBlock()
     {
-        return blocks[rndm.Next(blocks.Length)];
+        return blocks[random.Next(blocks.Length)];
     }
 
     public Block GetAndUpdate()

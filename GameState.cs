@@ -80,6 +80,6 @@ public class GameState
 
     private bool IsGameOver()
     {
-        return !GameGridInstance;
+        return GameGridInstance;
     }
 }
